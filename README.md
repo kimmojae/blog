@@ -1,0 +1,2 @@
+# blog
+Kimmojae's blog
