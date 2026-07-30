@@ -18,7 +18,15 @@ logs
 .fleet
 .idea
 
+# Design docs / specs (local only)
+docs
+
+# Playwright MCP verification output
+.playwright-mcp
+
 # Local env files
 .env
 .env.*
 !.env.example
+
+.playwright-mcp

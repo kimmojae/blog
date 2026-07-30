@@ -1,32 +1,31 @@
 <template>
-  <div class="m-auto max-w-2xl p-6 pt-3 md:pt-6 min-h-screen">
-    <header class="flex mb-5 md:mb-10 items-center">
-      <NuxtLink to="/" class="text-md md:text-lg whitespace-nowrap font-bold"
-        >Kimmojae
-      </NuxtLink>
+  <div class="mx-auto min-h-screen max-w-2xl px-6 py-8">
+    <header class="mb-10 flex items-center">
+      <NuxtLink to="/" class="font-bold">Kimmojae</NuxtLink>
 
-      <nav class="flex grow justify-end items-center gap-1 md:gap-3">
+      <nav class="ml-auto flex items-center gap-1">
         <NuxtLink
           to="/about"
-          class="inline-flex hover:bg-gray-200 dark:hover:bg-[#334555] rounded-sm p-2 text-xs"
-          >About
+          class="rounded p-2 text-sm hover:bg-gray-200 dark:hover:bg-gray-700"
+        >
+          About
         </NuxtLink>
 
         <a
           href="https://github.com/kimmojae"
           target="_blank"
-          class="inline-flex hover:bg-gray-200 dark:hover:bg-[#334555] rounded-sm p-2"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="inline-flex size-9 items-center justify-center rounded hover:bg-gray-200 dark:hover:bg-gray-700"
         >
           <Icon name="uil:github" />
         </a>
 
-        <ClientOnly>
-          <ColorModeSelector />
-        </ClientOnly>
+        <ColorModeToggle />
       </nav>
     </header>
 
-    <main class="max-w-2xl m-auto mb-10 text-sm">
+    <main>
       <slot />
     </main>
   </div>
@@ -34,6 +33,6 @@
 
 <script setup lang="ts">
 useHead({
-  titleTemplate: '%s - Kimmojae',
+  titleTemplate: '%s · Kimmojae',
 })
 </script>
